@@ -68,14 +68,14 @@ a:active {
   h1
   {
     margin-left: 16px;
-    margin-top: 56px;
+    margin-top: 64px;
     font-size: 3.24rem;
     line-height: 3.45rem;
     font-family: 'Cabin', sans-serif;
     font-weight: 600;
   }
 .article{
-  padding-top: 64px;
+  padding-top: 48px;
   padding-bottom: 16px;
 }
 .left{
@@ -92,5 +92,11 @@ a:active {
 img{
   width: 100%;
     height: auto;
+}
+.line{
+  padding-top: 32px;
+}
+br{
+  line-height: 10%;
 }
 }
