@@ -45,6 +45,7 @@ body{
 }
 .contact{
   color: blue;
+  cursor: pointer;
 }
 a:link {
     text-decoration: none;
