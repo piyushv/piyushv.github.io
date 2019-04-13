@@ -2,19 +2,26 @@ h1
 {
   margin-left: 96px;
   margin-top: 88px;
-  font-size:104px;
+  font-size:96px;
   line-height:112px;
   font-family: 'Cabin', sans-serif;
   font-weight: 600;
 }
+
+
 .grid {
     max-width: 1024px;
     margin: auto;
 }
 .article{
-  padding-top: 88px;
-  padding-bottom: 16px;
+  padding-top: 48px;
+  padding-bottom: 36px;
 }
+
+.contactme{
+  padding-top: 24px;
+}
+
 .left{
   padding-left: 56px;
 }
@@ -24,19 +31,22 @@ h1
 .right{
   padding-right: 56px;
 }
+.left_heading{
+  padding-left: 100px;
+}
 .line{
   padding-top: 56px;
 }
 .heading{
-  padding-top: 24px;
-  font-size: 28px;
-  line-height:42px;
+  padding-top: 20px;
+  font-size: 24px;
+  line-height:40px;
   font-family: 'Cabin', sans-serif;
   font-weight: 400;
 }
 .subtext{
-  font-size: 20px;
-  line-height:28px;
+  font-size: 17px;
+  line-height:23px;
   font-family: 'Playfair Display', serif;
   font-weight: 400;
 }
@@ -54,6 +64,11 @@ a:visited {
     color: black;
 }
 
+label {
+    display: inline-block;
+    margin-bottom: 0rem;
+}
+
 a:hover {
     text-decoration: none;
     color: #616161;
@@ -65,15 +80,15 @@ a:active {
 @media only screen and (max-width: 543px) {
   h1
   {
-    margin-left: 16px;
-    margin-top: 64px;
-    font-size: 3.24rem;
-    line-height: 3.45rem;
+    margin-left: 12px;
+    margin-top: 48px;
+    font-size: 3rem;
+    line-height: 3.4rem;
     font-family: 'Cabin', sans-serif;
     font-weight: 600;
   }
 .article{
-  padding-top: 48px;
+  padding-top: 12px;
   padding-bottom: 16px;
 }
 .left{
@@ -94,6 +109,11 @@ img{
 .line{
   padding-top: 32px;
 }
+
+.contactme{
+  padding-top: 18px;
+}
+
 br {
             display: block; /* makes it have a width */
             content: ""; /* clears default height */
