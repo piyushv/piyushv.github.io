@@ -87,10 +87,12 @@ a:active {
   display: inline-block;
   background: cyan;
   display: inline-block;
+  border-radius: 1%;
 }
 
 .overlay > img {
   vertical-align: middle;
+  border-radius: 1%;
 }
 
 .overlay::before {
