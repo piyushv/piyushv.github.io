@@ -85,7 +85,7 @@ a:active {
 .overlay {
   position: relative;
   display: inline-block;
-  background: cyan;
+  background: grey;
   display: inline-block;
   border-radius: 1%;
 }
@@ -116,7 +116,7 @@ img {
   border-radius: 1%;
 }
 
-@media only screen and (max-width: 543px) {
+@media only screen and (max-width: 743px) {
   h1
   {
     margin-left: 12px;
