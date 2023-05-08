@@ -6,7 +6,7 @@ h1
   line-height:112px;
   font-family: 'Cabin', sans-serif;
   font-weight: 600;
-  color: #343a40;
+  color: #f6faff;
 }
 
 
@@ -44,28 +44,30 @@ h1
   line-height:40px;
   font-family: 'Cabin', sans-serif;
   font-weight: 400;
+  color: #fff;
 }
 .subtext{
   font-size: 17px;
   line-height:23px;
   font-family: 'Playfair Display', serif;
   font-weight: 400;
+  color: #ffff;
 }
 .contact{
-  color: #3A33FF;
+  color: #7b8ceb;
   cursor: pointer;
 }
 .contact:hover{
-  color: #2824B3;
+  color: #7b8ceb;
 }
 a:link {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 a:visited {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 label {
@@ -75,7 +77,7 @@ label {
 
 a:hover {
     text-decoration: none;
-    color: #616161;
+    color: #bababa;
 }
 
 a:active {
