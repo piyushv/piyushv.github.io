@@ -51,7 +51,7 @@ h1
   line-height:23px;
   font-family: 'Playfair Display', serif;
   font-weight: 400;
-  color: #ffff;
+  color: #fff;
 }
 .contact{
   color: #7b8ceb;
@@ -148,7 +148,6 @@ img{
   height: auto;
   border-radius: 1%;
 }
-
 
 .line{
   padding-top: 32px;
