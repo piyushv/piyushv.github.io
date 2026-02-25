@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.png" />
+  <title>Ola Pedal | Piyush Verma</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<main>
+  <section class="case-study-hero section">
+    <div class="container">
+      <a href="../index.html" class="back-link">← Back to Home</a>
+
+      <h1>Designing Ola Pedal</h1>
+      <div class="case-study-meta">
+        <span>Product Design</span>
+        <span>·</span>
+        <span>2018</span>
+      </div>
+
+      <div class="case-study-hero-image">
+        <img src="../images/Olapedal.png" alt="Ola Pedal">
+      </div>
+
+      <div class="case-study-content">
+        <p>Ola, the ride-sharing company from India, launched its dockless cycle sharing service called Ola Pedal. Here I take you through the journey of designing Pedal.</p>
+
+        <figure class="case-study-image">
+          <img src="https://miro.medium.com/v2/resize:fit:1400/1*EqAcMIBmME7kBAVAjFHvLg.png" alt="Ola Pedal overview">
+        </figure>
+
+        <h2>Problem Statement</h2>
+        <p>People have to spend a lot of time walking inside campuses and around offices as transport may or may not be available. As <strong>shared cycle</strong> services are on the rise, we wanted to <strong>test</strong> if our users are willing to <strong>use</strong> them and <strong>pay</strong> for them.</p>
+
+        <h2>Research</h2>
+        <p>I started with <strong>secondary research</strong> and <strong>competitor analyses</strong> of various cycle-sharing companies to understand the models they follow and the features they provide. After this, I did <strong>Gorilla Testing</strong> by questioning people at nearby college campuses and in our business park. Key findings:</p>
+        <ul>
+          <li>The majority of people travel short distances by <strong>walking</strong>, some use a <strong>car</strong> or a <strong>shuttle</strong> service.</li>
+          <li>People are motivated to walk as they see it as a form of <strong>exercise</strong> — it saves time by avoiding parking and waiting for transport.</li>
+          <li><strong>Pain points</strong> of users who tried cycle sharing: returning cycles to a dock, depositing a security fee, and making a pass.</li>
+        </ul>
+
+        <h2>Scope</h2>
+        <p>After considering all initial user feedback, we decided to try a <strong>dockless cycle sharing</strong> service. Riders can pick and drop cycles <strong>anywhere</strong> on the street rather than at a fixed station, offering extreme flexibility and saving the expenses of renting a parking space. We divided the Pedal launch into two phases: Pilot and MVP.</p>
+
+        <div class="phase-section">
+          <h3>Phase 1 — Pilot</h3>
+          <p>We tested our dockless cycle sharing system with <strong>500 cycles</strong> at a college campus in India. We used cheap and readily available <strong>manual locks</strong> instead of automatic GPS locks (which would take ~2 months to ship), enabling a quick pilot launch.</p>
+          <p><strong>Challenge:</strong> No map since cycles had no GPS, so we designed a new flow without one. Created as a Web View for Android and iOS for faster launch. Turnaround time for design was <strong>five days</strong>, including user research.</p>
+          <p>I created multiple sketches to define the basic flow and layout, then iterated keeping it easy to code and in line with Ola style guidelines.</p>
+
+          <figure class="case-study-image">
+            <img src="https://miro.medium.com/v2/resize:fit:2000/1*TAkk8c2AoaRk0fTWW7WbDA.png" alt="Ola Pedal app flow">
+            <figcaption>Ola Pedal app flow</figcaption>
+          </figure>
+
+          <figure class="case-study-image">
+            <img src="https://miro.medium.com/v2/resize:fit:1400/1*BC8WM2bzntI8OA3UHVT3DQ.png" alt="Various illustrations">
+            <figcaption>Various illustrations made for the app</figcaption>
+          </figure>
+
+          <figure class="case-study-image">
+            <img src="https://miro.medium.com/v2/resize:fit:2000/1*HtZlfVKIio64S1Z27wuKGA.png" alt="Final design flow">
+            <figcaption>Final design flow</figcaption>
+          </figure>
+
+          <p>For the in-ride screen, the unlock pin is displayed prominently for the first 15 minutes (which are free). After 15 minutes, a timer shows ride duration alongside the fare for transparency.</p>
+
+          <figure class="case-study-image">
+            <img src="https://miro.medium.com/v2/resize:fit:1400/1*DqGgYCpzisqo4TV9wNuDJQ.png" alt="In-ride screen — first 15 minutes free">
+            <figcaption>In-ride screen — first 15 minutes free</figcaption>
+          </figure>
+
+          <figure class="case-study-image">
+            <img src="https://miro.medium.com/v2/resize:fit:1400/1*8o8Ch1knhqb_mZLJSpK8bg.png" alt="In-ride screen — after 15 minutes">
+            <figcaption>After 15 min — timer and fare shown for transparency</figcaption>
+          </figure>
+
+          <div class="results-grid" style="margin-top: 1.5rem;">
+            <div class="result-item">
+              <span class="result-number">1,500</span>
+              <span class="result-label">Rides per day from just 500 cycles</span>
+            </div>
+          </div>
+          <p style="margin-top: 1rem;">This proved our hypothesis that people take cycle rides and are willing to pay for them.</p>
+        </div>
+
+        <div class="phase-section">
+          <h3>Phase 2 — MVP</h3>
+          <p>We got 3,000 more cycles with app-based <strong>GPS locks</strong> on campuses and offices. Pedal was integrated into the Android and iOS Ola app. User testing from Phase 1 suggested users had trouble understanding the steps, so we added <strong>timely pop-ups and illustrations</strong> to help during the booking experience.</p>
+          <p>Cycles are now shown on the map to display nearby availability. A cycle illustration was added on the booking screen to make it easier for the user to find the cycle number.</p>
+
+          <figure class="case-study-image">
+            <img src="https://miro.medium.com/v2/resize:fit:1400/1*m8a5jaDj861defAQEdi4Pw.png" alt="Lock popup — cycle can't be locked automatically">
+            <figcaption>This popup is displayed when the user taps the lock icon because the cycle can't be locked automatically</figcaption>
+          </figure>
+
+          <div class="results-grid" style="margin-top: 1.5rem;">
+            <div class="result-item">
+              <span class="result-number">~17,000</span>
+              <span class="result-label">Rides per month with just 3,000 cycles after launch</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-study-nav">
+        <a href="eko-features.html">← Previous: Eko Features</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer section">
+  <div class="container text-center">
+    <p class="copyright">&copy; 2026 Piyush Verma. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+
+</html>
