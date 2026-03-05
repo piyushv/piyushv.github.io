@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.png" />
+  <title>VeVe Comics Curator | Piyush Verma</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=Nunito+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav">
+        <a href="../index.html" class="nav-logo">Piyush Verma</a>
+        <ul class="nav-links">
+          <li><a href="../index.html#work">Work</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<main>
+  <section class="case-study-hero section">
+    <div class="container">
+      <div class="case-study-content">
+        <a href="../index.html" class="back-link">← Back to Home</a>
+
+        <h1>Designing VeVe's Comics Curator</h1>
+        <p class="case-study-lead">How I built a self-serve publishing platform that scaled VeVe from 3 publishers to 17</p>
+
+        <div class="case-study-meta">
+          <span>Lead Product Designer (sole designer, end-to-end ownership)</span>
+          <span>·</span>
+          <span>~3 months</span>
+          <span>·</span>
+          <span>Web · Desktop-first</span>
+        </div>
+        <div class="case-study-meta" style="margin-top: 0.25rem;">
+          <span>Team: 1 PM · 1 User Researcher · 3 Engineers</span>
+          <span>·</span>
+          <span>Figma · FigJam · UserTesting.com · Google Analytics</span>
+        </div>
+
+        <!-- Hero Shot -->
+        <div class="mockup-hero">
+          <img
+            src="../images/CuratorMockup-01_Hero-Shot_Unpublished-Page.png"
+            alt="VeVe Comics Curator — Unpublished page overview"
+            loading="lazy"
+          >
+        </div>
+
+        <!-- ===== IMPACT ===== -->
+        <h2>Impact</h2>
+
+        <div class="results-section">
+          <div class="results-grid">
+            <div class="result-item">
+              <span class="result-number">−91%</span>
+              <span class="result-label">Time to publish (5–7 days → 45 min)</span>
+            </div>
+            <div class="result-item">
+              <span class="result-number">−96%</span>
+              <span class="result-label">Ops hours per comic (4.5 hrs → 12 min)</span>
+            </div>
+            <div class="result-item">
+              <span class="result-number">+443%</span>
+              <span class="result-label">Comics per month (35 → 190)</span>
+            </div>
+            <div class="result-item">
+              <span class="result-number">+467%</span>
+              <span class="result-label">Active publishers (3 → 17)</span>
+            </div>
+            <div class="result-item">
+              <span class="result-number">−87%</span>
+              <span class="result-label">Metadata errors (23% → 3.1%)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== CONTEXT ===== -->
+        <h2>Context</h2>
+
+        <p>VeVe is the world's largest mobile-first digital comics and collectibles platform. Over 10 million comic transactions. Partnerships with Marvel, Disney, DC, and more.</p>
+
+        <p>Every single comic was processed manually by VeVe's ops team through a tool that was barely holding together.</p>
+
+        <p>The tool was fragmented. Comic details lived in one database table. Page uploads in another. Covers in a third. The Authoring tool for panel separation ran through a completely separate interface. Creating one comic meant jumping across four disconnected screens and manually linking records between them.</p>
+
+        <p>Publishers had zero access. Everything went through ops via email. A single comic required 17 touchpoints from first email to going live.</p>
+
+        <p>This worked with 3 major publishers shipping about 35 comics a month. The business had signed new partners, the ops team was already at capacity, and the mandate was clear: scale to 10+ publishers without scaling headcount.</p>
+
+        <p>My job was to redesign everything. Unify the fragmented tool into a coherent platform publishers could use directly. I named it the Comics Curator. I owned the entire design process — research, IA, interaction design, visual design, design system, testing collaboration, and developer handoff.</p>
+
+        <!-- ===== DISCOVERY ===== -->
+        <h2>Discovery</h2>
+
+        <div class="phase-section">
+          <h3>Ops Shadowing (1 Day)</h3>
+
+          <p>I sat with the ops team for a full day watching them process comics in real time. I wanted to see the unfiltered reality before anyone had a chance to rationalize the workflow.</p>
+
+          <p><strong>What I found:</strong></p>
+          <ul>
+            <li>Every comic touched 17 touchpoints across email, Slack, Google Sheets, and the tool's scattered screens.</li>
+            <li>23% of comics had metadata errors caught only at QA.</li>
+            <li>Digital Comic and NFT Comic pricing was entered separately with no validation, and ops mixed them up on 12% of comics.</li>
+            <li>When publishers sent updated pages (about 30% of uploads), ops had to manually find changes across disconnected tables because there was no version control.</li>
+          </ul>
+
+          <p>One moment shaped my entire approach. I watched a coordinator spend 22 minutes entering metadata from a publisher's email. Halfway through 14 fields, she found a typo in the issue number. She deleted everything and started over. That became my core principle: <em>the system must prevent errors at input.</em></p>
+
+          <p>I documented the full workflow as a service blueprint that became my reference for every decision after.</p>
+        </div>
+
+        <div class="phase-section">
+          <h3>Publisher Interviews (5 Interviews, 3 Publishers)</h3>
+
+          <p>The researcher helped with recruiting and scripting. I led the interviews and synthesized findings using a jobs-to-be-done framework.</p>
+
+          <p><strong>Three quotes that directly shaped the product:</strong></p>
+
+          <blockquote>
+            <p>"We have every piece of metadata in our spreadsheets. If you let us upload that, we'd save hours every week."<br>
+            <em>— Digital ops coordinator. This led to the Excel import feature.</em></p>
+          </blockquote>
+
+          <blockquote>
+            <p>"I need my editors to upload drafts, but I don't want them pushing anything live."<br>
+            <em>— Publisher ops manager. This defined the approval workflow.</em></p>
+          </blockquote>
+
+          <blockquote>
+            <p>"We manage hundreds of characters and series. If I can't search and link them to comics, I'm just building another spreadsheet."<br>
+            <em>— Content lead. This led to the Categories module.</em></p>
+          </blockquote>
+        </div>
+
+        <div class="phase-section">
+          <h3>Support Ticket Analysis (200+ Tickets)</h3>
+
+          <p>I pulled six months of publisher-related tickets.</p>
+          <ul>
+            <li><strong>34%</strong> — Metadata corrections</li>
+            <li><strong>27%</strong> — "Where's my comic?" status inquiries</li>
+            <li><strong>19%</strong> — File format issues</li>
+            <li><strong>12%</strong> — Page errors from manual processing</li>
+            <li><strong>8%</strong> — Permission requests</li>
+          </ul>
+
+          <p>61% of all tickets were preventable through better UX. When the engineering lead later questioned whether inline validation was worth building, I showed him the 34% number. That conversation lasted 30 seconds.</p>
+        </div>
+
+        <!-- ===== DESIGN PRINCIPLES ===== -->
+        <h2>Design Principles</h2>
+
+        <p>Each one traces back to a specific research finding.</p>
+
+        <ul>
+          <li><strong>One comic, one place.</strong> Details, files, covers, metadata all unified in a single view. Derived from ops shadowing where fragmented tables forced manual cross-referencing.</li>
+          <li><strong>Import, don't retype.</strong> If it lives in a spreadsheet, upload the spreadsheet. Derived from publisher interviews and the 23% error rate caused by manual entry.</li>
+          <li><strong>Error prevention at input.</strong> Catch problems when data enters the system. Derived from the 22-minute rework I watched on day one.</li>
+          <li><strong>Connected catalog.</strong> Series, writers, artists, and characters as linked entities with a single source of truth. Derived from publishers managing hundreds of creators across thousands of comics.</li>
+          <li><strong>Controlled autonomy.</strong> Draft, review, and approval with clear roles. Derived from publisher needs and VeVe's internal quality control requirements.</li>
+        </ul>
+
+        <!-- ===== DESIGN DECISIONS ===== -->
+        <h2>Design Decisions</h2>
+
+        <div class="phase-section">
+          <h3>The Foundational Decision: Unifying the Flow</h3>
+
+          <p>The highest-impact decision was structural.</p>
+
+          <p>The old tool stored comic details in one screen, page uploads in another, covers in a third, authoring in a fourth. Ops cross-referenced records manually to connect them.</p>
+
+          <p>I brought everything inside a single comic. Open a comic in the Curator and you see its details, pages, covers, metadata, status, and edit history in one view. The mental model became "I'm working on Spider-Man #47" — a single object containing everything related to it.</p>
+        </div>
+
+        <div class="phase-section">
+          <h3>Information Architecture</h3>
+
+          <p>The IA evolved through publisher interview feedback. Two decisions mattered most.</p>
+
+          <p><strong>Comics</strong> (Unpublished, Published, Authoring) was the most-used section by far, so I placed it at the top with subsections always visible. Publishers constantly switch between these three views, and collapsing them behind a click would add friction to their most frequent action.</p>
+
+          <p><strong>Categories</strong> (Series, Writers, Artists, Characters) got its own top-level section because publishers spend dedicated sessions managing their taxonomy independent of individual comics. A publisher might spend an entire afternoon cleaning up writer names or adding characters. That workflow deserved its own space. Categories acts as the source of truth for the entire catalog.</p>
+
+          <pre class="code-block">COMICS CURATOR
+├── Dashboard
+├── Comics
+│   ├── Unpublished (Draft / Pending Approval / Approved)
+│   ├── Published
+│   ├── Authoring (panel separation workspace)
+│   └── [+ Add Comic]
+├── Categories (source of truth)
+│   ├── Series · Writers · Artists · Characters
+├── Marketing
+├── Account &amp; Settings
+└── Help &amp; Support</pre>
+
+          <p>The sidebar ordering changed based on interview feedback. Comics moved to the top because 70%+ of publisher time goes there.</p>
+
+          <img
+            src="../images/CuratorMockup-06_Sidebar-Navigation.png"
+            alt="Comics Curator sidebar navigation"
+            loading="lazy"
+            style="max-height: 500px; width: auto; margin: 2rem auto; display: block;"
+          >
+
+        </div>
+
+        <div class="phase-section">
+          <h3>The Add/Edit Comic Flow: Three Steps</h3>
+
+          <p>I replaced the fragmented multi-table experience with a three-step progressive disclosure flow.</p>
+
+          <p><strong>Step 1: Details.</strong> All metadata in one form. Title, issue number, series (linked from Categories), creators (linked from Writers and Artists), description, and pricing.</p>
+
+          <p>The pricing design required careful thought. VeVe has two comic types. Digital Comics work like ebooks with unlimited supply. NFT Comics are limited quantity collectibles with rarity tiers — Common, Uncommon, Rare, Ultra Rare, and Secret Rare — each with its own cover variant.</p>
+
+          <p>I designed the form to branch on type selection. Pick NFT Comic and the rarity section expands with tier-specific fields for each cover and edition count. Pick Digital Comic and that section stays hidden. The old tool showed all fields simultaneously regardless of type, which caused constant confusion.</p>
+
+          <p>Inline validation catches errors in real time: duplicate issue numbers trigger a warning with a link to the existing comic; creator names get "did you mean" suggestions from the Categories database; pricing inversions show a soft warning; required fields flag before you can move to the next step.</p>
+
+          <img
+            src="../images/CuratorMockup-07_Add-Comic-Step1-Details.png"
+            alt="Add Comic — Step 1: Details form with metadata, series linking, and pricing type branching"
+            class="mockup-image"
+            loading="lazy"
+          >
+          <p class="mockup-caption">Step 1: Details — all metadata in one form, branching pricing for Digital vs NFT Comic types</p>
+
+          <p><strong>Step 2: Import Pages.</strong> Upload as a full PDF (auto-split into pages) or individual images. Upload cover variants here too. In the old tool, files lived in a separate table. Here they're part of the comic itself.</p>
+
+          <img
+            src="../images/CuratorMockup-08_Add-Comic-Step2-Import.png"
+            alt="Add Comic — Step 2: Import pages with rarity cover uploads"
+            class="mockup-image"
+            loading="lazy"
+          >
+          <p class="mockup-caption">Step 2: Import — pages and cover variants unified inside the comic, no separate table</p>
+
+          <p><strong>Step 3: Review.</strong> Summary of everything before submission. Go back to any step to edit, then submit. Submission moves the comic to Pending Approval status.</p>
+
+          <img
+            src="../images/CuratorMockup-09_Add-Comic-Step3-Review.png"
+            alt="Add Comic — Step 3: Review summary before submission"
+            class="mockup-image"
+            loading="lazy"
+          >
+          <p class="mockup-caption">Step 3: Review — full summary before submission, replacing the old multi-screen cross-referencing</p>
+        </div>
+
+        <div class="phase-section">
+          <h3>The Unpublished Page</h3>
+
+          <p>This is where publishers spend most of their time. The table shows cover thumbnails for visual recognition, comic name, release date, total issues, Digital Comic price, NFT Comic price, series, comic number, last edited, status, and actions.</p>
+
+          <p>I gave Digital Comic and NFT Comic prices their own visible columns because the old tool stacked them in a layout that was easy to misread. Ops mixed them up on 12% of comics. Side-by-side columns let publishers scan and compare pricing across their entire catalog at a glance.</p>
+
+          <img
+            src="../images/CuratorMockup-10_Unpublished-Page-Annotated.png"
+            alt="Unpublished page — annotated showing status badges, dual pricing columns, and feedback action"
+            class="mockup-image"
+            loading="lazy"
+          >
+          <p class="mockup-caption">Unpublished page — status badges, dual pricing columns, and feedback action for in-tool review communication</p>
+
+          <p>The approval workflow serves VeVe's internal review process. <strong>Draft</strong> means the publisher is still working. <strong>Pending Approval</strong> means they've submitted and VeVe's team needs to review. <strong>Approved</strong> means it's cleared for publishing.</p>
+
+          <p>The Feedback button appears on comics that have received review notes from VeVe's internal team. It's a structured form that replaced the old email and Slack back-and-forth. Reviewers send change requests tied to the specific comic, and publishers can see which comics need attention instantly.</p>
+
+          <div class="mockup-image-pair">
+            <img
+              src="../images/CuratorMockup-11_Approval-Flow-States.png"
+              alt="Three approval states — Draft, Pending Approval, Approved"
+              loading="lazy"
+            >
+            <img
+              src="../images/CuratorMockup-11b_Approval-Feedback-Form.png"
+              alt="Feedback form — structured change requests from VeVe reviewers"
+              loading="lazy"
+            >
+          </div>
+          <p class="mockup-caption">Approval states (Draft → Pending Approval → Approved) and the Feedback form that replaced Slack back-and-forth</p>
+        </div>
+
+        <div class="phase-section">
+          <h3>The Categories Module</h3>
+
+          <p>In the old tool, series, writers, artists, and characters were free-text fields inside individual comic records. "Stan Lee" and "Stanley Lee" and "S. Lee" coexisted across hundreds of comics. There was no canonical list, no way to browse by series, no linked data.</p>
+
+          <p>I designed four interconnected modules: Series, Writers, Artists, and Characters. Each is a standalone management view and a connected reference for the entire catalog.</p>
+
+          <p>The interaction works in both directions. When a publisher adds a comic and types a creator name, the form searches the Writers and Artists database. If the name exists, it links automatically. If it doesn't, they create a new entry inline — and it becomes available for every future comic. The comic form reads from taxonomy, and taxonomy grows from comic creation.</p>
+
+          <p>This is what elevated the Curator to a publishing platform. Publishers manage their catalog taxonomy in dedicated sessions — cleaning up names, organizing series, adding characters — and everything they create flows into the comic creation form automatically.</p>
+
+          <div class="mockup-image-pair">
+            <img
+              src="../images/CuratorMockup-12a_Categories-Series-Listing.png"
+              alt="Categories — Series listing with linked comic counts"
+              loading="lazy"
+            >
+            <img
+              src="../images/CuratorMockup-12b_Categories-Writers-Artists-Listing.png"
+              alt="Categories — Writers and Artists database"
+              loading="lazy"
+            >
+          </div>
+          <p class="mockup-caption">Categories module — Series, Writers, and Artists as first-class objects. Add once, link everywhere, one canonical spelling</p>
+        </div>
+
+        <div class="phase-section">
+          <h3>The Authoring Workspace</h3>
+
+          <p>VeVe comics are experienced one panel at a time with cinematic transitions. The Authoring section is where pages get separated into individual panels with a defined reading order.</p>
+
+          <p>This tool already existed in the old system through a completely separate interface. I brought it inside the Curator as a subsection under Comics. Same specialized workspace, same panel separation capabilities, now accessible without leaving the platform.</p>
+
+          <img
+            src="../images/CuratorMockup-13_Authoring-Workspace.png"
+            alt="Authoring workspace — panel separation interface for VeVe's one-panel-at-a-time reading experience"
+            class="mockup-image"
+            loading="lazy"
+          >
+          <p class="mockup-caption">Authoring workspace — panel boundaries and reading order defined inside the Curator, no separate interface</p>
+        </div>
+
+        <div class="phase-section">
+          <h3>Design System</h3>
+
+          <p>I built a Figma design system covering components for forms, table cells, status badges, navigation, and modals. The table component was flexible enough to reuse across Unpublished, Published, Series, Writers, Artists, and Characters views. I defined layout templates for dashboard, table, and detail views, a consistent status color system, and responsive breakpoints. Engineering estimated it cut frontend development time by about 30%.</p>
+        </div>
+
+        <!-- ===== USABILITY TESTING ===== -->
+        <h2>Usability Testing</h2>
+
+        <p>We ran one round of unmoderated testing with 5 participants on UserTesting.com. The researcher recruited and set up sessions. I collaborated on the script and analyzed findings.</p>
+
+        <p>Three issues stood out, and I fixed each one.</p>
+
+        <div class="phase-section">
+          <h3>The Excel template was invisible.</h3>
+          <p>It was styled as an inline text link that users missed completely. I promoted it to a primary button at the top of the import section with a first-visit tooltip.</p>
+        </div>
+
+        <div class="phase-section">
+          <h3>Feedback blended into the table.</h3>
+          <p>The Feedback action looked identical to Edit, Preview, and Details. I added a distinct icon and a notification indicator for unread feedback so publishers could see which comics need attention.</p>
+        </div>
+
+        <div class="phase-section">
+          <h3>Approval was too slow for batch review.</h3>
+          <p>VeVe reviewers processing a queue of submissions wanted to approve directly from the list. I added a quick approval action in the table row for Pending Approval comics.</p>
+        </div>
+
+        <!-- ===== RESULTS ===== -->
+        <h2>Results</h2>
+
+        <div class="results-section">
+          <div class="results-grid">
+            <div class="result-item">
+              <span class="result-number">~45 min</span>
+              <span class="result-label">Time to publish (target &lt;1 day)</span>
+            </div>
+            <div class="result-item">
+              <span class="result-number">~12 min</span>
+              <span class="result-label">Ops hours per comic (target &lt;30 min)</span>
+            </div>
+            <div class="result-item">
+              <span class="result-number">17</span>
+              <span class="result-label">Active publishers (target 10+)</span>
+            </div>
+            <div class="result-item">
+              <span class="result-number">3.1%</span>
+              <span class="result-label">Metadata error rate (target &lt;5%)</span>
+            </div>
+            <div class="result-item">
+              <span class="result-number">+72 NPS</span>
+              <span class="result-label">Publisher satisfaction (target &gt;50)</span>
+            </div>
+            <div class="result-item">
+              <span class="result-number">190/mo</span>
+              <span class="result-label">Comics published (up from 35)</span>
+            </div>
+          </div>
+        </div>
+
+        <p>Comic transaction volume grew about 8% in the months after launch. Reader engagement increased roughly 7% as the catalog diversified. Secondary market listings grew around 5%. Publisher retention was 100%, zero churn. The ops reduction gave publishers more autonomy and freed the internal team to focus on signing new partners.</p>
+
+        <p>Pending Approval became the most-used filter on the Unpublished page. Writers and Artists databases were accessed multiple times weekly by each publisher in standalone sessions. Pricing errors dropped significantly from the old 12% baseline. Internal review communication moved almost entirely from Slack to in-tool Feedback.</p>
+
+        <!-- ===== REFLECTIONS ===== -->
+        <h2>Reflections</h2>
+
+        <p>Starting with IA was the right call for a problem rooted in information structure. One day of ops shadowing gave me outsized insight for the time invested. Quantifying the problem — 34% of tickets from metadata errors, 12% pricing mix-ups — earned stakeholder trust fast and accelerated decisions. The Categories module was my scope expansion: I identified the need through interviews, built the case, and got it approved. It became one of the most-used features.</p>
+
+        <p>If I did this again, I'd bring publishers into co-design during the IA phase. I'd push for a second testing round to validate fixes. I'd build in-app onboarding. And I'd test notification cadence before launch.</p>
+
+        <p><strong>Next:</strong> AI-assisted panel detection in Authoring, a publisher analytics dashboard, enhanced approval workflows, and API access for enterprise integrations.</p>
+
+        <p><em>VeVe's readers will never see the Comics Curator. It's the reason the catalog grew from 35 to 190 comics a month, the reason 14 new publishers joined, and the reason hundreds of comics are managed in one unified tool.</em></p>
+
+        <div class="case-study-nav">
+          <a href="veve-waitlist.html">← Previous: VeVe Waitlist</a>
+          <a href="pomelo-livestream.html" class="next">Next: Pomelo Livestream →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

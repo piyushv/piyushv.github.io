@@ -10,7 +10,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=Nunito+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="../css/style.css">
@@ -18,20 +18,31 @@
 
 <body>
 
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav">
+        <a href="../index.html" class="nav-logo">Piyush Verma</a>
+        <ul class="nav-links">
+          <li><a href="../index.html#work">Work</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
 <main>
   <section class="case-study-hero section">
     <div class="container">
-      <a href="../index.html" class="back-link">← Back to Home</a>
-
-      <h1>Agoda Long-stays</h1>
-      <div class="case-study-meta">
-        <span>Web, Android, iOS</span>
-        <span>·</span>
-        <span>2023</span>
-      </div>
-
-
       <div class="case-study-content">
+        <a href="../index.html" class="back-link">← Back to Home</a>
+
+        <h1>Agoda Long-stays</h1>
+        <div class="case-study-meta">
+          <span>Web, Android, iOS</span>
+          <span>·</span>
+          <span>2023</span>
+        </div>
         <p>Agoda, a leading online platform for accommodations worldwide, identified the potential for growth in long-stays post-pandemic as more people adopt remote work, look for ways to relax and de-stress, and want to experience new places.</p>
 
         <h2>Research</h2>
@@ -121,22 +132,19 @@
         <h2>Learning & Future Steps</h2>
         <p>Agoda's success in improving the user experience for long stays highlights the importance of focusing on user needs in the travel industry. By iterating on designs based on data and analytics leads to higher conversion.</p>
         <p>Going forward, Agoda will continue to monitor data and analytics to identify new opportunities.</p>
-      </div>
 
-      <div class="case-study-nav">
-        <a href="pomelo-livestream.html" class="next">Next: Pomelo Livestream →</a>
+        <div class="case-study-nav">
+          <a href="veve-waitlist.html" class="next">Next: Veve Waitlist →</a>
+        </div>
       </div>
     </div>
   </section>
 </main>
 
-<footer class="site-footer section">
-  <div class="container text-center">
-    <p class="copyright">&copy; 2026 Piyush Verma. All rights reserved.</p>
-  </div>
-</footer>
-
-<script src="../js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="../js/main.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.png" />
+  <title>Veve Waitlist 2.0 | Piyush Verma</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=Nunito+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .cs-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-6) 0;
+      font-size: 0.9375rem;
+    }
+
+    .cs-table th {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-color);
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--border-color);
+      text-align: left;
+    }
+
+    .cs-table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      line-height: 1.6;
+      vertical-align: top;
+    }
+
+    .cs-table td:first-child {
+      color: var(--text-primary);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .cs-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* Cap non-hero images at 300px */
+    .case-study-content .mockup-image {
+      width: 100%;
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .case-study-content .mockup-image-pair {
+      max-width: 630px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .case-study-content .mockup-image-pair img {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav">
+        <a href="../index.html" class="nav-logo">Piyush Verma</a>
+        <ul class="nav-links">
+          <li><a href="../index.html#work">Work</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="case-study-hero section">
+      <div class="container">
+        <div class="case-study-content">
+          <a href="../index.html" class="back-link">← Back to Home</a>
+
+          <h1>Veve Waitlist 2.0: Giving Every Collector a Fair Shot at Limited Drops</h1>
+          <div class="case-study-meta">
+            <span>iOS, Android, Web</span>
+            <span>·</span>
+            <span>Q3 2023</span>
+            <span>·</span>
+            <span>Lead Product Designer (0→1)</span>
+          </div>
+
+          <!-- ===== IMPACT ===== -->
+          <h2>Impact</h2>
+
+          <div class="results-section">
+            <div class="results-grid">
+              <div class="result-item">
+                <span class="result-number">+8 pp</span>
+                <span class="result-label">International participation</span>
+              </div>
+              <div class="result-item">
+                <span class="result-number">−20%</span>
+                <span class="result-label">Payment abandonment</span>
+              </div>
+              <div class="result-item">
+                <span class="result-number">+35%</span>
+                <span class="result-label">Addressable market expansion</span>
+              </div>
+              <div class="result-item">
+                <span class="result-number">45%→63%</span>
+                <span class="result-label">Selected → paid conversion</span>
+              </div>
+              <div class="result-item">
+                <span class="result-number">~76%</span>
+                <span class="result-label">Auto-pay enablement at full launch</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== MY ROLE ===== -->
+          <h2>My Role</h2>
+          <p>The waitlist concept came from PM and leadership. I was the sole designer - responsible for turning that
+            direction into a shipped product across three platforms.</p>
+          <p>I owned the end-to-end UX: waitlist joining flow, auto-pay integration, draw experience, failure states,
+            notification lifecycle, and edge cases. I ran usability testing (5 users, high-fidelity prototypes,
+            UserTesting) and produced all final UI for iOS, Android, and web.</p>
+          <p>Team: 1 PM, 1 Researcher, 3 Engineers (one per platform), me.</p>
+
+          <!-- ===== THE PROBLEM ===== -->
+          <h2>The Problem</h2>
+          <p>Veve's drops worked the same way every time: thousands of users racing to hit "Buy" at exactly 10:00 AM
+            EST.</p>
+          <p>It punished international users. 65% of successful purchases came from US timezones, even though only 40%
+            of the user base lived there. Collectors in Bangkok were up at 11 PM. London collectors set 3 AM alarms.</p>
+          <p>It created panic instead of excitement. 45% of users who reached checkout abandoned - wrong item clicked,
+            insufficient gems, or technical timeouts. A 30-second window left zero room for thoughtful decisions.</p>
+          <p>It eroded trust. Discord was full of timezone complaints, payment failure frustrations, and suspicion that
+            bots always won.</p>
+
+          <blockquote>"I set 5 alarms across 3 time zones and still miss it."</blockquote>
+          <blockquote>"I have the money, but I can't click fast enough."</blockquote>
+
+
+
+          <!-- ===== THE DESIGN SHIFT ===== -->
+          <h2>The Design Shift</h2>
+          <p>The old model rewarded speed. The new model rewards participation.</p>
+
+          <table class="cs-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Before</th>
+                <th>After</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Participation</td>
+                <td>30-second window, fixed time</td>
+                <td>24 hours, join anytime</td>
+              </tr>
+              <tr>
+                <td>Selection</td>
+                <td>Fastest connection wins</td>
+                <td>Transparent random draw</td>
+              </tr>
+              <tr>
+                <td>Payment</td>
+                <td>Manual checkout under panic</td>
+                <td>Pre-authorized auto-pay</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>Our researcher ran interviews that confirmed the direction: users wanted fairness without FOMO -
+            participation without the penalty of missed sleep.</p>
+
+
+
+          <!-- ===== JOIN FLOW ===== -->
+          <h2>The Join Flow: 5 Frantic Steps → 3 Calm Taps</h2>
+          <p>The old experience required up to 5 interactions under time pressure. I reduced it to three taps: "Join
+            Waitlist" → toggle auto-pay → "Confirm."</p>
+          <p>The confirmation screen shows a countdown in the user's local timezone and a clear "Leave Waitlist" option.
+            I made the leave option prominent on purpose, when users know they can exit anytime, they're more
+            comfortable committing.</p>
+
+          <img src="../images/Join%20vs%20Joined%20-%20Hero%20Comparison%20Waitlist.png"
+            alt="Join vs Joined - hero comparison showing both states" loading="lazy" class="mockup-image"
+            style="max-width: 600px;">
+          <p class="mockup-caption">Join vs Joined, two states side by side showing the before and after of entering the
+            waitlist</p>
+
+          <div class="mockup-image-pair">
+            <img src="../images/Join%20Waitlist%20-%20CTA%20%2B%20Toggle%20Off%20Waitlist.png"
+              alt="Join Waitlist - CTA with auto-pay toggle off" loading="lazy">
+            <img src="../images/Waitlist%20Joined%20with%20Auto-Pay%20Waitlist.png"
+              alt="Waitlist joined with auto-pay enabled" loading="lazy">
+          </div>
+          <p class="mockup-caption">Left: join screen with auto-pay toggle off. Right: confirmed waitlist entry with
+            auto-pay active</p>
+
+
+          <!-- ===== AUTO-PAY ===== -->
+          <h2>Auto-Pay: The Highest-Impact Decision</h2>
+          <p>This single interaction change moved more numbers than anything else in the project.</p>
+          <p>My first design put auto-pay on a separate screen after joining. During usability testing, I watched
+            participants hesitate - the "payment setup" framing triggered the same checkout anxiety we were trying to
+            eliminate.</p>
+          <p>I redesigned it as an inline toggle with one line: "You'll only be charged if selected. Leave anytime
+            before the draw."</p>
+          <p>Auto-pay enablement went from 15% (separate step) to 23% (inline toggle) in testing, reaching ~76% at full
+            launch. That drove selected-to-paid conversion from 45% to 63%.</p>
+          <p>For users with insufficient gems, I added a one-tap top-up with Apple Pay/Google Pay inline, cutting the
+            old 7-step process to 2.</p>
+
+          <div class="mockup-image-pair">
+            <img src="../images/Auto-Pay%20Enabled%20Modal%20Waitlist.png" alt="Auto-Pay Enabled Modal" loading="lazy">
+            <img src="../images/Auto-Pay%20Explainer%20Modal%20Waitlist.png" alt="Auto-Pay Explainer Modal"
+              loading="lazy">
+          </div>
+          <p class="mockup-caption">Auto-pay enabled modal (left) and explainer modal (right), copy designed to reduce
+            payment anxiety</p>
+
+          <img src="../images/Auto-Pay%20Enabled%20-%20Toast%20Confirmation%20Waitlist.png"
+            alt="Auto-Pay Enabled - toast confirmation" loading="lazy" class="mockup-image">
+          <p class="mockup-caption">Auto-pay enabled toast, lightweight confirmation that doesn't interrupt the
+            experience</p>
+
+          <div class="mockup-image-pair">
+            <img src="../images/Add%20Gems%20-%20Purchase%20Screen%20Waitlist.png" alt="Add Gems - purchase screen"
+              loading="lazy">
+            <img src="../images/Add%20Gems%20-%20Purchase%20Screen%202%20Waitlist.png"
+              alt="Add Gems - purchase screen variant" loading="lazy">
+          </div>
+          <p class="mockup-caption">Add Gems inline top-up, one-tap gem purchase with Apple Pay/Google Pay</p>
+
+          <!-- ===== DRAW & RESULTS ===== -->
+          <h2>The Draw &amp; Results Experience</h2>
+          <p>For winners: Celebration state with clear next steps. Auto-pay users see instant confirmation.</p>
+          <p>Non-auto-pay users get a 15-minute grace period, a push notification, full-screen purchase screen with
+            countdown and one-tap
+            payment. If they don't pay, the item cascades to the next random user automatically.</p>
+          <p>For non-winners (the majority): I used a red result indicator deliberately. An
+            earlier gray version felt evasive in testing. Red communicates the outcome honestly, and users preferred
+            clarity over cushioning.</p>
+
+          <div class="mockup-image-pair">
+            <img src="../images/Selected%20-%20Auto-Pay%20Processing%20Waitlist.png"
+              alt="Selected - auto-pay processing" loading="lazy">
+            <img src="../images/Selected%20-%20Manual%20Buy%20Now%20Waitlist.png" alt="Selected - manual Buy Now"
+              loading="lazy">
+          </div>
+          <p class="mockup-caption">Selected state auto-pay processing (left) vs. manual Buy Now for users without
+            auto-pay (right)</p>
+
+          <div class="mockup-image-pair">
+            <img src="../images/Drop%20Secured%20-%20Win%20Modal%20Waitlist.png" alt="Drop Secured - win modal"
+              loading="lazy">
+            <img src="../images/Not%20Selected%20-%20Result%20Screen%20Waitlist.png" alt="Not Selected - result screen"
+              loading="lazy">
+          </div>
+          <p class="mockup-caption">Win confirmation modal (left), celebration with clear next steps. Not Selected
+            (right), red indicator communicates the outcome honestly. Secondary market link turns a dead end into
+            discovery</p>
+
+          <!-- ===== NOTIFICATION LIFECYCLE ===== -->
+          <h2>Notification Lifecycle</h2>
+          <p>The system is async, so notifications became the primary interface.</p>
+
+          <table class="cs-table">
+            <thead>
+              <tr>
+                <th>Stage</th>
+                <th>Channel</th>
+                <th>Purpose</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Waitlist opens</td>
+                <td>Push + Email</td>
+                <td>Inform, no urgency</td>
+              </tr>
+              <tr>
+                <td>Draw reminder</td>
+                <td>Push</td>
+                <td>Anticipation, confirm auto-pay</td>
+              </tr>
+              <tr>
+                <td>Result</td>
+                <td>Push + In-app</td>
+                <td>Win: celebrate. Loss: honest + forward action</td>
+              </tr>
+              <tr>
+                <td>Grace period</td>
+                <td>Push + SMS</td>
+                <td>Urgency for unpaid winners</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>Batching: Power users joining 5 waitlists get one digest, not 5 pings. Individual notifications only for
+            results.</p>
+          <p>Quiet hours: Nothing between 10 PM to 8 AM local time except win confirmations. A product built to stop
+            sleep disruption shouldn't send 3 AM notifications.</p>
+
+          <div class="mockup-image-pair">
+            <img src="../images/Waitlist%20Closed%20-%20Drop%20in%20Progress%20Waitlist.png"
+              alt="Waitlist Closed - drop in progress" loading="lazy">
+            <img src="../images/On%20the%20Waitlist%20-%20Closed%20State%20Waitlist.png"
+              alt="On the Waitlist - closed state" loading="lazy">
+          </div>
+          <p class="mockup-caption">Drop in progress (left) and waitlist closed state (right), keeping users informed at
+            every stage</p>
+
+          <img src="../images/Auto-Pay%20Successful%20-%20Delivering%20Waitlist.png"
+            alt="Auto-Pay Successful - delivering" loading="lazy" class="mockup-image">
+          <p class="mockup-caption">Auto-pay successful, delivery confirmation completing the async purchase loop</p>
+
+          <!-- ===== EDGE CASES / GRACE PERIOD ===== -->
+          <h2>Edge Cases</h2>
+
+          <div class="phase-section">
+            <h3>Auto-pay failure &amp; grace period</h3>
+            <p>When auto-pay fails (expired card, insufficient gems), the item enters a 15-minute reserved state. A
+              full-screen purchase screen with countdown appears. Users can top up gems inline and complete the purchase
+              in one tap. If unpaid, the item cascades automatically to the next random user.</p>
+          </div>
+
+          <div class="mockup-image-pair">
+            <img src="../images/Auto-Pay%20Failed%20-%20Technical%20Error%20Waitlist.png"
+              alt="Auto-Pay Failed - technical error" loading="lazy">
+            <img src="../images/Auto-Pay%20Failed%20-%20Low%20Gem%20Balance%20Waitlist.png"
+              alt="Auto-Pay Failed - low gem balance" loading="lazy">
+          </div>
+          <p class="mockup-caption">Auto-pay failure states, technical error (left) and low gem balance (right), each
+            with a clear recovery path</p>
+
+
+          <div class="phase-section">
+            <h3>Bot prevention</h3>
+            <p>One entry per KYC-verified account. Bots can't game a transparent random system.</p>
+          </div>
+
+          <!-- ===== COMMUNITY RESPONSE ===== -->
+          <h2>Community Response</h2>
+          <p>After launch, users on X posted about finally sleeping through the night. Discord tone shifted from
+            frustration to relief. People were participating more and enjoying it again.</p>
+
+          <!-- ===== RESULTS ===== -->
+          <h2>Results</h2>
+
+          <div class="results-section">
+            <div class="results-grid">
+              <div class="result-item">
+                <span class="result-number">+8 pp</span>
+                <span class="result-label">International participation</span>
+              </div>
+              <div class="result-item">
+                <span class="result-number">~25%</span>
+                <span class="result-label">Payment abandonment (was ~45%)</span>
+              </div>
+              <div class="result-item">
+                <span class="result-number">45%→63%</span>
+                <span class="result-label">Selected → paid conversion</span>
+              </div>
+              <div class="result-item">
+                <span class="result-number">~76%</span>
+                <span class="result-label">Auto-pay enablement</span>
+              </div>
+              <div class="result-item">
+                <span class="result-number">+35%</span>
+                <span class="result-label">Addressable market expansion</span>
+              </div>
+            </div>
+          </div>
+
+          <p>The inline auto-pay toggle was the single decision that moved the most numbers. A small change to separate
+            screen to inline toggle drove 76% enablement, which drove conversion, which expanded the market. The
+            biggest impact came from the smallest UI change.</p>
+
+          <!-- ===== WHAT I'D DO DIFFERENTLY ===== -->
+          <h2>What I'd Do Differently</h2>
+
+          <div class="phase-section">
+            <h3>Social features from day one</h3>
+            <p>Users coordinated on Discord post-launch. A "Join with Friends" feature was a missed viral loop.</p>
+          </div>
+
+          <div class="phase-section">
+            <h3>Richer loss experience</h3>
+            <p>The market link was a start. Personalized recommendations and price alerts would turn the loss state into
+              a discovery surface.</p>
+          </div>
+
+
+          <div class="case-study-nav">
+            <a href="agoda-long-stays.html">← Previous: Agoda Long-stays</a>
+            <a href="veve-publisher-portal.html" class="next">Next: VeVe Publisher Portal →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+
+</html>
