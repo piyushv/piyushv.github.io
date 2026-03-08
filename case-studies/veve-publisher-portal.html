@@ -14,6 +14,44 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .cs-project-meta {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-5) var(--space-4);
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      padding: var(--space-5) 0;
+      margin: var(--space-6) 0;
+    }
+
+    .cs-meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+    }
+
+    .cs-meta-label {
+      font-family: var(--font-mono);
+      font-size: 0.63rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-color);
+    }
+
+    .cs-meta-value {
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .cs-project-meta {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -39,24 +77,30 @@
         <h1>Designing VeVe's Comics Curator</h1>
         <p class="case-study-lead">How I built a self-serve publishing platform that scaled VeVe from 3 publishers to 17</p>
 
-        <div class="case-study-meta">
-          <span>Lead Product Designer (sole designer, end-to-end ownership)</span>
-          <span>·</span>
-          <span>~3 months</span>
-          <span>·</span>
-          <span>Web · Desktop-first</span>
-        </div>
-        <div class="case-study-meta" style="margin-top: 0.25rem;">
-          <span>Team: 1 PM · 1 User Researcher · 3 Engineers</span>
-          <span>·</span>
-          <span>Figma · FigJam · UserTesting.com · Google Analytics</span>
+        <div class="cs-project-meta">
+          <div class="cs-meta-item">
+            <span class="cs-meta-label">Role</span>
+            <span class="cs-meta-value">Lead Product Designer<br>Sole designer, end-to-end ownership</span>
+          </div>
+          <div class="cs-meta-item">
+            <span class="cs-meta-label">Duration</span>
+            <span class="cs-meta-value">~3 months</span>
+          </div>
+          <div class="cs-meta-item">
+            <span class="cs-meta-label">Platform</span>
+            <span class="cs-meta-value">Web · Desktop-first</span>
+          </div>
+          <div class="cs-meta-item">
+            <span class="cs-meta-label">Team</span>
+            <span class="cs-meta-value">1 PM · 1 User Researcher · 3 Engineers</span>
+          </div>
         </div>
 
         <!-- Hero Shot -->
         <div class="mockup-hero">
           <img
             src="../images/CuratorMockup-01_Hero-Shot_Unpublished-Page.png"
-            alt="VeVe Comics Curator — Unpublished page overview"
+            alt="VeVe Comics Curator: Unpublished page overview"
             loading="lazy"
           >
         </div>
@@ -75,8 +119,8 @@
               <span class="result-label">Ops hours per comic (4.5 hrs → 12 min)</span>
             </div>
             <div class="result-item">
-              <span class="result-number">+443%</span>
-              <span class="result-label">Comics per month (35 → 190)</span>
+              <span class="result-number">+66%</span>
+              <span class="result-label">Comics per month (35 → 58)</span>
             </div>
             <div class="result-item">
               <span class="result-number">+467%</span>
@@ -102,7 +146,7 @@
 
         <p>This worked with 3 major publishers shipping about 35 comics a month. The business had signed new partners, the ops team was already at capacity, and the mandate was clear: scale to 10+ publishers without scaling headcount.</p>
 
-        <p>My job was to redesign everything. Unify the fragmented tool into a coherent platform publishers could use directly. I named it the Comics Curator. I owned the entire design process — research, IA, interaction design, visual design, design system, testing collaboration, and developer handoff.</p>
+        <p>My job was to redesign everything. Unify the fragmented tool into a coherent platform publishers could use directly. I named it the Comics Curator. I owned the entire design process: research, IA, interaction design, visual design, design system, testing collaboration, and developer handoff.</p>
 
         <!-- ===== DISCOVERY ===== -->
         <h2>Discovery</h2>
@@ -153,11 +197,11 @@
 
           <p>I pulled six months of publisher-related tickets.</p>
           <ul>
-            <li><strong>34%</strong> — Metadata corrections</li>
-            <li><strong>27%</strong> — "Where's my comic?" status inquiries</li>
-            <li><strong>19%</strong> — File format issues</li>
-            <li><strong>12%</strong> — Page errors from manual processing</li>
-            <li><strong>8%</strong> — Permission requests</li>
+            <li><strong>34%</strong>: Metadata corrections</li>
+            <li><strong>27%</strong>: "Where's my comic?" status inquiries</li>
+            <li><strong>19%</strong>: File format issues</li>
+            <li><strong>12%</strong>: Page errors from manual processing</li>
+            <li><strong>8%</strong>: Permission requests</li>
           </ul>
 
           <p>61% of all tickets were preventable through better UX. When the engineering lead later questioned whether inline validation was worth building, I showed him the 34% number. That conversation lasted 30 seconds.</p>
@@ -186,7 +230,7 @@
 
           <p>The old tool stored comic details in one screen, page uploads in another, covers in a third, authoring in a fourth. Ops cross-referenced records manually to connect them.</p>
 
-          <p>I brought everything inside a single comic. Open a comic in the Curator and you see its details, pages, covers, metadata, status, and edit history in one view. The mental model became "I'm working on Spider-Man #47" — a single object containing everything related to it.</p>
+          <p>I brought everything inside a single comic. Open a comic in the Curator and you see its details, pages, covers, metadata, status, and edit history in one view. The mental model became "I'm working on Spider-Man #47," a single object containing everything related to it.</p>
         </div>
 
         <div class="phase-section">
@@ -229,7 +273,7 @@
 
           <p><strong>Step 1: Details.</strong> All metadata in one form. Title, issue number, series (linked from Categories), creators (linked from Writers and Artists), description, and pricing.</p>
 
-          <p>The pricing design required careful thought. VeVe has two comic types. Digital Comics work like ebooks with unlimited supply. NFT Comics are limited quantity collectibles with rarity tiers — Common, Uncommon, Rare, Ultra Rare, and Secret Rare — each with its own cover variant.</p>
+          <p>The pricing design required careful thought. VeVe has two comic types. Digital Comics work like ebooks with unlimited supply. NFT Comics are limited quantity collectibles with rarity tiers (Common, Uncommon, Rare, Ultra Rare, and Secret Rare), each with its own cover variant.</p>
 
           <p>I designed the form to branch on type selection. Pick NFT Comic and the rarity section expands with tier-specific fields for each cover and edition count. Pick Digital Comic and that section stays hidden. The old tool showed all fields simultaneously regardless of type, which caused constant confusion.</p>
 
@@ -237,31 +281,31 @@
 
           <img
             src="../images/CuratorMockup-07_Add-Comic-Step1-Details.png"
-            alt="Add Comic — Step 1: Details form with metadata, series linking, and pricing type branching"
+            alt="Add Comic, Step 1: Details form with metadata, series linking, and pricing type branching"
             class="mockup-image"
             loading="lazy"
           >
-          <p class="mockup-caption">Step 1: Details — all metadata in one form, branching pricing for Digital vs NFT Comic types</p>
+          <p class="mockup-caption">Step 1: Details, all metadata in one form, branching pricing for Digital vs NFT Comic types</p>
 
           <p><strong>Step 2: Import Pages.</strong> Upload as a full PDF (auto-split into pages) or individual images. Upload cover variants here too. In the old tool, files lived in a separate table. Here they're part of the comic itself.</p>
 
           <img
             src="../images/CuratorMockup-08_Add-Comic-Step2-Import.png"
-            alt="Add Comic — Step 2: Import pages with rarity cover uploads"
+            alt="Add Comic, Step 2: Import pages with rarity cover uploads"
             class="mockup-image"
             loading="lazy"
           >
-          <p class="mockup-caption">Step 2: Import — pages and cover variants unified inside the comic, no separate table</p>
+          <p class="mockup-caption">Step 2: Import, pages and cover variants unified inside the comic, no separate table</p>
 
           <p><strong>Step 3: Review.</strong> Summary of everything before submission. Go back to any step to edit, then submit. Submission moves the comic to Pending Approval status.</p>
 
           <img
             src="../images/CuratorMockup-09_Add-Comic-Step3-Review.png"
-            alt="Add Comic — Step 3: Review summary before submission"
+            alt="Add Comic, Step 3: Review summary before submission"
             class="mockup-image"
             loading="lazy"
           >
-          <p class="mockup-caption">Step 3: Review — full summary before submission, replacing the old multi-screen cross-referencing</p>
+          <p class="mockup-caption">Step 3: Review, full summary before submission, replacing the old multi-screen cross-referencing</p>
         </div>
 
         <div class="phase-section">
@@ -273,11 +317,11 @@
 
           <img
             src="../images/CuratorMockup-10_Unpublished-Page-Annotated.png"
-            alt="Unpublished page — annotated showing status badges, dual pricing columns, and feedback action"
+            alt="Unpublished page: annotated showing status badges, dual pricing columns, and feedback action"
             class="mockup-image"
             loading="lazy"
           >
-          <p class="mockup-caption">Unpublished page — status badges, dual pricing columns, and feedback action for in-tool review communication</p>
+          <p class="mockup-caption">Unpublished page: status badges, dual pricing columns, and feedback action for in-tool review communication</p>
 
           <p>The approval workflow serves VeVe's internal review process. <strong>Draft</strong> means the publisher is still working. <strong>Pending Approval</strong> means they've submitted and VeVe's team needs to review. <strong>Approved</strong> means it's cleared for publishing.</p>
 
@@ -286,12 +330,12 @@
           <div class="mockup-image-pair">
             <img
               src="../images/CuratorMockup-11_Approval-Flow-States.png"
-              alt="Three approval states — Draft, Pending Approval, Approved"
+              alt="Three approval states: Draft, Pending Approval, Approved"
               loading="lazy"
             >
             <img
               src="../images/CuratorMockup-11b_Approval-Feedback-Form.png"
-              alt="Feedback form — structured change requests from VeVe reviewers"
+              alt="Feedback form: structured change requests from VeVe reviewers"
               loading="lazy"
             >
           </div>
@@ -305,23 +349,23 @@
 
           <p>I designed four interconnected modules: Series, Writers, Artists, and Characters. Each is a standalone management view and a connected reference for the entire catalog.</p>
 
-          <p>The interaction works in both directions. When a publisher adds a comic and types a creator name, the form searches the Writers and Artists database. If the name exists, it links automatically. If it doesn't, they create a new entry inline — and it becomes available for every future comic. The comic form reads from taxonomy, and taxonomy grows from comic creation.</p>
+          <p>The interaction works in both directions. When a publisher adds a comic and types a creator name, the form searches the Writers and Artists database. If the name exists, it links automatically. If it doesn't, they create a new entry inline, and it becomes available for every future comic. The comic form reads from taxonomy, and taxonomy grows from comic creation.</p>
 
-          <p>This is what elevated the Curator to a publishing platform. Publishers manage their catalog taxonomy in dedicated sessions — cleaning up names, organizing series, adding characters — and everything they create flows into the comic creation form automatically.</p>
+          <p>This is what elevated the Curator to a publishing platform. Publishers manage their catalog taxonomy in dedicated sessions (cleaning up names, organizing series, adding characters), and everything they create flows into the comic creation form automatically.</p>
 
           <div class="mockup-image-pair">
             <img
               src="../images/CuratorMockup-12a_Categories-Series-Listing.png"
-              alt="Categories — Series listing with linked comic counts"
+              alt="Categories: Series listing with linked comic counts"
               loading="lazy"
             >
             <img
               src="../images/CuratorMockup-12b_Categories-Writers-Artists-Listing.png"
-              alt="Categories — Writers and Artists database"
+              alt="Categories: Writers and Artists database"
               loading="lazy"
             >
           </div>
-          <p class="mockup-caption">Categories module — Series, Writers, and Artists as first-class objects. Add once, link everywhere, one canonical spelling</p>
+          <p class="mockup-caption">Categories module: Series, Writers, and Artists as first-class objects. Add once, link everywhere, one canonical spelling</p>
         </div>
 
         <div class="phase-section">
@@ -333,11 +377,11 @@
 
           <img
             src="../images/CuratorMockup-13_Authoring-Workspace.png"
-            alt="Authoring workspace — panel separation interface for VeVe's one-panel-at-a-time reading experience"
+            alt="Authoring workspace: panel separation interface for VeVe's one-panel-at-a-time reading experience"
             class="mockup-image"
             loading="lazy"
           >
-          <p class="mockup-caption">Authoring workspace — panel boundaries and reading order defined inside the Curator, no separate interface</p>
+          <p class="mockup-caption">Authoring workspace: panel boundaries and reading order defined inside the Curator, no separate interface</p>
         </div>
 
         <div class="phase-section">
@@ -394,7 +438,7 @@
               <span class="result-label">Publisher satisfaction (target &gt;50)</span>
             </div>
             <div class="result-item">
-              <span class="result-number">190/mo</span>
+              <span class="result-number">58/mo</span>
               <span class="result-label">Comics published (up from 35)</span>
             </div>
           </div>
@@ -407,13 +451,13 @@
         <!-- ===== REFLECTIONS ===== -->
         <h2>Reflections</h2>
 
-        <p>Starting with IA was the right call for a problem rooted in information structure. One day of ops shadowing gave me outsized insight for the time invested. Quantifying the problem — 34% of tickets from metadata errors, 12% pricing mix-ups — earned stakeholder trust fast and accelerated decisions. The Categories module was my scope expansion: I identified the need through interviews, built the case, and got it approved. It became one of the most-used features.</p>
+        <p>Starting with IA was the right call for a problem rooted in information structure. One day of ops shadowing gave me outsized insight for the time invested. Quantifying the problem (34% of tickets from metadata errors, 12% pricing mix-ups) earned stakeholder trust fast and accelerated decisions. The Categories module was my scope expansion: I identified the need through interviews, built the case, and got it approved. It became one of the most-used features.</p>
 
         <p>If I did this again, I'd bring publishers into co-design during the IA phase. I'd push for a second testing round to validate fixes. I'd build in-app onboarding. And I'd test notification cadence before launch.</p>
 
         <p><strong>Next:</strong> AI-assisted panel detection in Authoring, a publisher analytics dashboard, enhanced approval workflows, and API access for enterprise integrations.</p>
 
-        <p><em>VeVe's readers will never see the Comics Curator. It's the reason the catalog grew from 35 to 190 comics a month, the reason 14 new publishers joined, and the reason hundreds of comics are managed in one unified tool.</em></p>
+        <p><em>VeVe's readers will never see the Comics Curator. It's the reason the catalog grew from 35 to 58 comics a month, the reason 14 new publishers joined, and the reason hundreds of comics are managed in one unified tool.</em></p>
 
         <div class="case-study-nav">
           <a href="veve-waitlist.html">← Previous: VeVe Waitlist</a>

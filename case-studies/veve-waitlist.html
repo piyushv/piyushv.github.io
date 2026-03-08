@@ -54,6 +54,43 @@
       border-bottom: none;
     }
 
+    /* Project meta grid */
+    .cs-project-meta {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-5) var(--space-4);
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      padding: var(--space-5) 0;
+      margin: var(--space-6) 0;
+    }
+
+    .cs-meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+    }
+
+    .cs-meta-label {
+      font-family: var(--font-mono);
+      font-size: 0.63rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-color);
+    }
+
+    .cs-meta-value {
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .cs-project-meta {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
     /* Cap non-hero images at 300px */
     .case-study-content .mockup-image {
       width: 100%;
@@ -97,12 +134,19 @@
           <a href="../index.html" class="back-link">← Back to Home</a>
 
           <h1>Veve Waitlist 2.0: Giving Every Collector a Fair Shot at Limited Drops</h1>
-          <div class="case-study-meta">
-            <span>iOS, Android, Web</span>
-            <span>·</span>
-            <span>Q3 2023</span>
-            <span>·</span>
-            <span>Lead Product Designer (0→1)</span>
+          <div class="cs-project-meta">
+            <div class="cs-meta-item">
+              <span class="cs-meta-label">Role</span>
+              <span class="cs-meta-value">Lead Product Designer<br>Sole designer, end-to-end ownership</span>
+            </div>
+            <div class="cs-meta-item">
+              <span class="cs-meta-label">Duration</span>
+              <span class="cs-meta-value">~3 months</span>
+            </div>
+            <div class="cs-meta-item">
+              <span class="cs-meta-label">Team</span>
+              <span class="cs-meta-value">1 PM · 1 User Researcher · 3 Engineers</span>
+            </div>
           </div>
 
           <!-- ===== IMPACT ===== -->
@@ -201,12 +245,6 @@
           <p>The confirmation screen shows a countdown in the user's local timezone and a clear "Leave Waitlist" option.
             I made the leave option prominent on purpose, when users know they can exit anytime, they're more
             comfortable committing.</p>
-
-          <img src="../images/Join%20vs%20Joined%20-%20Hero%20Comparison%20Waitlist.png"
-            alt="Join vs Joined - hero comparison showing both states" loading="lazy" class="mockup-image"
-            style="max-width: 600px;">
-          <p class="mockup-caption">Join vs Joined, two states side by side showing the before and after of entering the
-            waitlist</p>
 
           <div class="mockup-image-pair">
             <img src="../images/Join%20Waitlist%20-%20CTA%20%2B%20Toggle%20Off%20Waitlist.png"

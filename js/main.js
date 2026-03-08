@@ -10,8 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
         gsap.registerPlugin(ScrollTrigger);
 
         const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const isMobile = window.matchMedia('(max-width: 768px)').matches;
 
-        if (!prefersReducedMotion) {
+        if (!prefersReducedMotion && !isMobile) {
 
             // GSAP sets initial hidden state via JS (not CSS)
             // This ensures content is visible if JS fails
