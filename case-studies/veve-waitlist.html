@@ -110,6 +110,63 @@
       margin-left: 0;
       margin-right: 0;
     }
+
+    /* Interaction flow */
+    .interaction-flow {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      margin: var(--space-6) 0;
+      flex-wrap: wrap;
+    }
+
+    .interaction-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-2);
+      flex: 1;
+      min-width: 80px;
+    }
+
+    .interaction-step-number {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid var(--accent-color);
+      color: var(--accent-color);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .interaction-step-label {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    .interaction-arrow {
+      color: var(--text-muted);
+      font-size: 1rem;
+      flex-shrink: 0;
+      padding-bottom: 20px;
+    }
+
+    @media (max-width: 480px) {
+      .interaction-flow {
+        gap: var(--space-1);
+      }
+      .interaction-step {
+        min-width: 56px;
+      }
+      .interaction-step-label {
+        font-size: 0.65rem;
+      }
+    }
   </style>
 </head>
 
@@ -240,8 +297,25 @@
 
           <!-- ===== JOIN FLOW ===== -->
           <h2>The Join Flow: 5 Frantic Steps → 3 Calm Taps</h2>
-          <p>The old experience required up to 5 interactions under time pressure. I reduced it to three taps: "Join
-            Waitlist" → toggle auto-pay → "Confirm."</p>
+          <p>The old experience required up to 5 interactions under time pressure: "Join Waitlist" → Wait for drop → Pay in 15 mins → "Confirm" → Wait for results.</p>
+          <p>I reduced it to three taps:</p>
+          <div class="interaction-flow">
+            <div class="interaction-step">
+              <div class="interaction-step-number">1</div>
+              <div class="interaction-step-label">Join Waitlist</div>
+            </div>
+            <div class="interaction-arrow">→</div>
+            <div class="interaction-step">
+              <div class="interaction-step-number">2</div>
+              <div class="interaction-step-label">Toggle auto-pay</div>
+            </div>
+            <div class="interaction-arrow">→</div>
+            <div class="interaction-step">
+              <div class="interaction-step-number">3</div>
+              <div class="interaction-step-label">Confirm</div>
+            </div>
+          </div>
+
           <p>The confirmation screen shows a countdown in the user's local timezone and a clear "Leave Waitlist" option.
             I made the leave option prominent on purpose, when users know they can exit anytime, they're more
             comfortable committing.</p>
