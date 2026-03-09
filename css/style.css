@@ -910,6 +910,13 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: var(--space-2);
 }
 
+.results-summary {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-top: var(--space-5);
+}
+
 .case-study-nav {
     display: flex;
     justify-content: space-between;
@@ -1009,6 +1016,56 @@ h1, h2, h3, h4, h5, h6 {
 
 .lightbox-close::after {
     transform: rotate(-45deg);
+}
+
+/* =========================================
+   CASE STUDY TABLES
+   ========================================= */
+
+.case-study-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--space-5) 0;
+    font-size: 0.9rem;
+}
+
+.case-study-table th {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    padding: var(--space-3) var(--space-4);
+    border-bottom: 1px solid var(--border-color);
+    text-align: left;
+    font-weight: 500;
+}
+
+.case-study-table td {
+    padding: var(--space-3) var(--space-4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    color: var(--text-secondary);
+    line-height: 1.6;
+    vertical-align: top;
+}
+
+.case-study-table tr:last-child td {
+    border-bottom: none;
+}
+
+.case-study-table td strong,
+.case-study-table th strong {
+    color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+    .case-study-table {
+        font-size: 0.8rem;
+    }
+    .case-study-table th,
+    .case-study-table td {
+        padding: var(--space-2) var(--space-3);
+    }
 }
 
 /* =========================================
@@ -1181,5 +1238,89 @@ button:focus-visible {
     }
     .results-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* ===== Role & Team Card ===== */
+.role-card {
+    background: var(--surface-elevated);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    margin: var(--space-5) 0 var(--space-8);
+}
+
+.role-meta-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--space-6);
+    padding-bottom: var(--space-6);
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: var(--space-6);
+}
+
+.role-meta-label {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent-color);
+    margin-bottom: var(--space-3);
+}
+
+.role-meta-text {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.team-pills {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.team-pill {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    padding: 4px 10px;
+    border-radius: 100px;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    background: rgba(255,255,255,0.03);
+    width: fit-content;
+}
+
+.owned-label {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent-color);
+    margin-bottom: var(--space-4);
+}
+
+.case-study-content .owned-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.case-study-content .owned-list li {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    font-weight: 300;
+    margin: 0;
+}
+
+@media (max-width: 640px) {
+    .role-meta-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-5);
     }
 }
