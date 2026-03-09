@@ -1118,16 +1118,16 @@ button:focus-visible {
         max-width: 100%;
     }
 
-    .case-study-hero {
-        padding-top: calc(var(--space-8) + 70px);
-    }
-
     .results-grid {
         grid-template-columns: 1fr 1fr;
     }
 
     .section {
         padding: var(--space-8) 0;
+    }
+
+    .case-study-hero {
+        padding-top: calc(var(--space-8) + 70px);
     }
 
     .lightbox-close {
@@ -1139,6 +1139,10 @@ button:focus-visible {
 }
 
 @media (max-width: 480px) {
+    .case-study-hero {
+        padding-top: calc(var(--space-8) + 90px);
+    }
+
     .hero-links {
         flex-direction: row;
         flex-wrap: wrap;
